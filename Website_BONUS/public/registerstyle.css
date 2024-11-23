@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px); 
+    z-index: -1; 
+}
+
+.form-container {
+    background:  rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.form-container h2 {
+    text-align: center;
+    color: #fff;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+
+select,
+button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    
+}
+
+button {
+    background-color: #ba4d1b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c45b1e;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.login-link a {
+    color: #eaea07;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+ 
+    align-self: start;
+    margin-bottom: 10px;
+    
+}

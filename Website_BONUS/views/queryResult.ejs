@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        .navbar {
+            padding: 10px 0;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .navbar h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .button-primary {
+            margin: 0 10px;
+            float: right; /* Aligns the button to the right */
+            font-size: 16px;
+        }
+    </style>
+    <title>SQL QUERY OUTPUT</title>
+</head>
+<body>
+    <div class="navbar">
+        <center><h1> <%= title %></h1></center>
+       
+        <form action="/users/backtodashboard" method="post" style="margin:0;">
+            <button type="submit" class="button-primary">Back to Dashboard</button>
+        </form>
+    </div>
+
+
+
+    <!-- <h3>Executed Query: <</h3>
+    <h3>Output of the Query:</h3> -->
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <% if (rows.length > 0) { %>
+                    <% Object.keys(rows[0]).forEach((key) => { %>
+                        <th><%= key %></th>
+                    <% }); %>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+            <% rows.forEach((row) => { %>
+                <tr>
+                    <% Object.values(row).forEach((value) => { %>
+                        <td><%= value %></td>
+                    <% }); %>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
