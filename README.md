@@ -1,9 +1,5 @@
 # Social Media Management System
 
-## Overview
-
-The **Social Media Management System** is a comprehensive platform designed to streamline social media management tasks, including scheduling posts, tracking performance, and managing accounts. This repository includes resources for setting up the system, configuring the database, and deploying the website.
-
 ## Features
 
 -   User-friendly interface for managing multiple social media accounts.
